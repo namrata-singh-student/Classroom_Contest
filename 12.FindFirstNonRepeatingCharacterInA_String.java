@@ -57,6 +57,32 @@ public class Solution {
     }
 }
 
+//One more optimal way
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        
+        int[] freq = new int[256];
+        for(int i = 0; i<s.length(); i++){
+            freq[s.charAt(i)]++;
+        }
+        
+        for(int i = 0; i<s.length() ;i++){
+            if(freq[s.charAt(i)] == 1){
+                System.out.print(s.charAt(i));
+                return ;
+            }
+        }
+        System.out.print("NO");
+    }
+}
+
 //C++ Code
 #include <cmath>
 #include <cstdio>
